@@ -27,8 +27,9 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
               title: Text('Cristiano Ronaldu '),
               // subtitle: Text('Show his informations arrow icon'),
               children: [
-                Image.network(
-                    'https://akns-images.eonline.com/eol_images/Entire_Site/201909/rs_634x1024-190109152450-634x1024-cristianoronaldo-gj-1-9-19.jpg?fit=around%7C634:1024&output-quality=90&crop=634:1024;center,top')
+                Column(
+                  children: [Image.asset('images/ronaldo.jpeg'), Text('He was born in Portugal')],
+                )
               ],
             ),
             ExpansionTile(
@@ -39,15 +40,28 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
                 ;
               },
               title: Text('Paulo Dybala'),
-              trailing: Icon(changerIcon
-                  ? Icons.arrow_drop_up
-                  : Icons.arrow_drop_down),
+              trailing: Icon(
+                  changerIcon ? Icons.arrow_drop_up : Icons.arrow_drop_down),
               children: [
-                Image.network(
-                    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRiB2AgLrvtSE4Nz84ZU_DFdpGHnA5JWG8-3w&usqp=CAU')
+                Column(
+                  children: [
+                    Image.asset('images/dybala.jpg'),
+                    Text('He was born in Argentina ')
+                  ],
+                )
               ],
             ),
-            ExpansionTile(title: Text('Dybala & Ronaldu'),children: [Image.network('https://pbs.twimg.com/media/E1N9TuuXIAoZ3aE.jpg')],)
+            ExpansionTile(
+              title: Text('Dybala & Ronaldu'),
+              children: [
+                Column(
+                  children: [
+                    Image.asset('images/kings.jpg'),
+                    Text('They are kings of Juventus')
+                  ],
+                ),
+              ],
+            )
           ],
         ),
       ),
