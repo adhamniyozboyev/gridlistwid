@@ -15,7 +15,7 @@ class _ExpansionWidgetState extends State<ExpansionWidget> {
   bool changerIcon = false;
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp(debugShowCheckedModeBanner: false,
       home: Scaffold(
         appBar: AppBar(
           title: Text('Expansion Tile'),
